@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <script src=""></script>
+    <script src="../static/js/echarts.js"></script>
+<!--    <link rel="stylesheet" href="../static/css/web.css">-->
+    <title>Echarts demo</title>
+
+</head>
+<body>
+<div id="main" style="width: 600px;height:400px;"></div>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+    var option = {
+            title: {
+                text: '大数据1801同学在线时间'
+            },
+            tooltip: {},
+            legend: {
+                data:['时间']
+            },
+            xAxis: {
+                data: ["60以下","60-69","70-79","80以上"]
+            },
+            yAxis: {},
+            series: [{
+                name: '时间',
+                type: 'bar',
+                data: [10, 5, 26, 47]
+            }]
+        };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+</body>
+
+</html>

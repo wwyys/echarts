@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <script src="../static/js/echarts.js"></script>
+    <title>Echarts demo</title>
+</head>
+<body>
+
+<div id="main" style="width:800px;height:400px;"></div>
+<script type="text/javascript">
+    //给予准备好的dom,初始化echarts实例
+    var mychart = echarts.init(document.getElementById('main'));
+    //制定图表的配置项和数据
+    var option={
+        tilte:{
+            text:'观看直播人数分类'
+        },
+        tooltip:{},
+        legend: {
+            data:['Echarts入门-考勤记录.xlsx']
+        },
+        xAxis:{
+            data:["20","40","60","80"]
+        },
+        yAxis:{},
+        series:[{
+            name:"观看直播时间",
+            type:"bar",   //line  折线图     pie  饼图
+            data:[4,8,9,4,6,4]        //制作饼图时，去掉x，y轴   radius  半径
+        }]
+    };
+    //连接
+    mychart.setOption(option);
+
+</script>
+
+</body>
+
+</html>
